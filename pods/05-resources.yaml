@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: pod
+metadata: 
+  name: resources
+spec: 
+  containers: 
+  - name: nginx
+    image: nginx
+    imagePullPolicy: Always   #if we mention always here it will get pull images always from docker so, mention always
+    resources: 
+      requests: 
+        cpu: "100m"
+        memory: "128Mi"
+      limits: 
+        cpu: "200m"
+        memory: "256Mi"
+
+
